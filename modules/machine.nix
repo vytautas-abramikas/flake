@@ -37,11 +37,27 @@
     # The following is saved from initial configuration, might help detect new hardware
     # enableRedistributableFirmware = lib.mkDefault true;
     cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
-    graphics.enable = true;
-    enableAllFirmware = true;
+    # graphics.enable = true;
+    # enableAllFirmware = true;
+    graphics = { 
+      enable = true;
+    };
+    nvidia = {
+      package = config.boot.kernelPackages.nvidiaPackages.legacy_470;
+      modesetting.enable = true;
+      powerManagement.enable = true;
+      open = false;
+      nvidiaSettings = true;
+      prime = {
+        offload = {
+          enable = true;
+        };
+      };
+    };
   };
 
-  services.xserver.videoDrivers = ["i915"];
+  services.xserver.videoDriver = "auto";
+  services.xserver.extraConfig = "Option \"PreferredMode\" \":0\"";
 
   # NVIDIA stuff, this doesnt work, TODO later
   # hardware.nvidia.open = false;

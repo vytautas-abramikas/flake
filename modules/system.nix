@@ -53,7 +53,7 @@
     };
 
     systemPackages = with pkgs; [
-      wget fbset hwinfo htop
+      wget fbset hwinfo htop busybox
     ];
 
     plasma6.excludePackages = with pkgs.kdePackages; [

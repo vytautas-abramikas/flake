@@ -13,13 +13,13 @@
 
   time.timeZone = "Europe/Vilnius";
 
-  # Select internationalisation properties.
-  # i18n.defaultLocale = "en_US.UTF-8";
-  # console = {
-  #	font = "Lat2-Terminus16";
-  #	keyMap = "us";
-  #	useXkbConfig = true; # use xkb.options in tty.
-  #};
+  i18n = { 
+    defaultLocale = "en_US.UTF-8";
+    supportedLocales = [ "en_US.UTF-8/UTF-8" "en_DK.UTF-8/UTF-8" ];
+    environmentVariables.LC_TIME = "en_DK.UTF-8";
+    environmentVariables.LC_NUMERIC = "en_DK.UTF-8";
+    environmentVariables.LC_MEASUREMENT = "en_DK.UTF-8";
+  };
   
   services = {
     pipewire = {
@@ -31,8 +31,11 @@
     printing.enable = true;
     xserver = {
       enable = true;
-      xkb.layout = "us";
-      xkb.options = "eurosign:e,caps:escape";
+      layout = "us";
+      xkbVariant = "";
+      xkbModel = "pc105";
+      xkbLayout = "us,lt,ru";
+      xkbOptions = "eurosign:e,caps:escape,grp:alt_shift_toggle,grp_led:scroll,grp:alt_shift_toggle";
     };
     displayManager.sddm = {
       enable = true;

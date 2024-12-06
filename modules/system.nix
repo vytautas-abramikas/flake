@@ -57,7 +57,7 @@
     ];
 
     plasma6.excludePackages = with pkgs.kdePackages; [
-      kate
+      kate elisa
     ];
   };
 

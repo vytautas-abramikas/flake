@@ -28,9 +28,9 @@
     };
     libinput.enable = true;
     openssh.enable = true;
+    printing.enable = true;
     xserver = {
       enable = true;
-      videoDrivers = ["i915"];
       xkb.layout = "us";
       xkb.options = "eurosign:e,caps:escape";
     };
@@ -52,16 +52,9 @@
     ];
   };
 
-  # Enable CUPS to print documents.
-  # services.printing.enable = true;
-
-  # Enable pulseaudio sound (now using pipewire).
-  # hardware.pulseaudio.enable = true;
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.broliux = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "sudo" "networkmanager"]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "networkmanager"];
     home = "/home/broliux";
     shell = pkgs.bash;
     packages = with pkgs; [

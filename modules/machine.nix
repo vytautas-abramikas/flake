@@ -34,14 +34,16 @@
   };
 
   hardware = {
+    # The following is saved from initial configuration, might help detect new hardware
     # enableRedistributableFirmware = lib.mkDefault true;
     cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
     graphics.enable = true;
     enableAllFirmware = true;
   };
 
+  services.xserver.videoDrivers = ["i915"];
+
   # NVIDIA stuff, this doesnt work, TODO later
-  # nixpkgs.config.allowUnfree = true;
   # hardware.nvidia.open = false;
   # hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;  
 }

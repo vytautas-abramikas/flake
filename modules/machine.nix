@@ -21,6 +21,12 @@
     fsType = "ext4";
   };
 
+  fileSystems."/mnt/sda2" = {
+    device = "/dev/disk/by-uuid/e08fedfa-3132-4d0c-9617-7a96cec23d45";
+    fsType = "ext4";
+    options = [ "noauto" "rw" "uid=1001" "gid=100"];
+  };
+
   swapDevices = [];
 
   zramSwap = {

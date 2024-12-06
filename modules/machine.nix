@@ -50,8 +50,8 @@
       nvidiaPersistenced = true;
       nvidiaSettings = true;
       prime = {
-        intelBusId = "0@0:2:0";
-        nvidiaBusId = "1@0:0:0";
+        intelBusId = "PCI:0:2:0";
+        nvidiaBusId = "PCI:1:0:0";
         offload = {
           enable = true;
           enableOffloadCmd = true;
@@ -61,9 +61,4 @@
   };
 
   services.xserver.videoDrivers = ["modesetting" "nvidia"];
-  services.xserver.extraConfig = "Option \"PreferredMode\" \":0\"";
-
-  # NVIDIA stuff, this doesnt work, TODO later
-  # hardware.nvidia.open = false;
-  # hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;  
 }

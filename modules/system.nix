@@ -53,7 +53,7 @@
     };
 
     systemPackages = with pkgs; [
-      wget fbset hwinfo htop busybox
+      wget fbset hwinfo htop busybox tree
     ];
 
     plasma6.excludePackages = with pkgs.kdePackages; [
@@ -67,9 +67,8 @@
     home = "/home/broliux";
     shell = pkgs.bash;
     packages = with pkgs; [
-      tree
       git nodejs github-desktop vscodium
-      firefox vlc
+      brave firefox vlc
     ];
   };
 }

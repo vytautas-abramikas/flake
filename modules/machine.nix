@@ -47,17 +47,20 @@
       modesetting.enable = true;
       powerManagement.enable = true;
       open = false;
+      nvidiaPersistenced = true;
       nvidiaSettings = true;
       prime = {
-        intelBusId = "PCI:0:2:0";
-        nvidiaBusId = "PCI:1:0:0";
-        offload.enable = true;
+        intelBusId = "0@0:2:0";
+        nvidiaBusId = "1@0:0:0";
+        offload = {
+          enable = true;
+          enableOffloadCmd = true;
+        };
       };
-      
     };
   };
 
-  services.xserver.videoDrivers = ["i915" "nvidia"];
+  services.xserver.videoDrivers = ["modesetting" "nvidia"];
   services.xserver.extraConfig = "Option \"PreferredMode\" \":0\"";
 
   # NVIDIA stuff, this doesnt work, TODO later

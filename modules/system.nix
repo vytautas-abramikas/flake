@@ -16,9 +16,6 @@
   i18n = { 
     defaultLocale = "en_US.UTF-8";
     supportedLocales = [ "en_US.UTF-8/UTF-8" "en_DK.UTF-8/UTF-8" ];
-    environmentVariables.LC_TIME = "en_DK.UTF-8";
-    environmentVariables.LC_NUMERIC = "en_DK.UTF-8";
-    environmentVariables.LC_MEASUREMENT = "en_DK.UTF-8";
   };
   
   services = {
@@ -46,6 +43,12 @@
   };
 
   environment = {
+    variables = {
+      LC_TIME = "en_DK.UTF-8";
+      LC_NUMERIC = "en_DK.UTF-8";
+      LC_MEASUREMENT = "en_DK.UTF-8";
+    };
+
     systemPackages = with pkgs; [
       wget fbset hwinfo htop
     ];

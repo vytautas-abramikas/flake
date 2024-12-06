@@ -45,6 +45,8 @@
 
   environment = {
     variables = {
+      LANG="en_GB.UTF-8";
+      LC_ALL="en_GB.UTF-8";
       LC_TIME = "en_GB.UTF-8";
       LC_NUMERIC = "en_DK.UTF-8";
       LC_MEASUREMENT = "en_DK.UTF-8";

@@ -36,6 +36,7 @@
     };
     displayManager.sddm = {
       enable = true;
+      settings = { Time = { Format = "24"; }; };
     };
     desktopManager.plasma6 = {
       enable = true;

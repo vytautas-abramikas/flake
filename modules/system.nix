@@ -28,11 +28,11 @@
     printing.enable = true;
     xserver = {
       enable = true;
-      layout = "us";
-      xkbVariant = "";
-      xkbModel = "pc105";
-      xkbLayout = "us,lt,ru";
-      xkbOptions = "eurosign:e,caps:escape,grp:alt_shift_toggle,grp_led:scroll,grp:alt_shift_toggle";
+      keyboardLayout = { 
+        model = "pc105";
+        layout = "us,lt,ru";
+        options = "grp:alt_shift_toggle,eurosign:e,caps:escape,grp_led:scroll"; 
+        };
     };
     displayManager.sddm = {
       enable = true;

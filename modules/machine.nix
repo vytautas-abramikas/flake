@@ -47,14 +47,14 @@
     # enableRedistributableFirmware = lib.mkDefault true;
     cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
     graphics.enable = true;
-    enableAllFirmware = true;
+    # enableAllFirmware = true;
     nvidia = {
       package = config.boot.kernelPackages.nvidiaPackages.legacy_470;
       modesetting.enable = true;
-      powerManagement.enable = true;
+      # powerManagement.enable = true;
       open = false;
       nvidiaPersistenced = true;
-      nvidiaSettings = true;
+      # nvidiaSettings = true;
       prime = {
         intelBusId = "PCI:0:2:0";
         nvidiaBusId = "PCI:1:0:0";

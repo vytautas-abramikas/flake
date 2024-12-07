@@ -59,19 +59,16 @@
         };
       };
     };
+    bumblebee = {
+      enable = true;
+      driver = "nvidia";
+      group = "wheel";
+    };
   };
 
   services.xserver.videoDrivers = ["modesetting" "intel" "nvidia"];
-  services.bumblebee = {
-    enable = true;
-    nvidia = { 
-      enable = true;
-    };
-    primus = true;
-    userGroups = ["users"];
-  };
 
-  environment.systemPackages = with pkgs; [ 
-    bumblebee nvidia-settings primus bbswitch 
-  ];
+  # environment.systemPackages = with pkgs; [ 
+  #   bumblebee nvidia-settings primus bbswitch 
+  # ];
 }

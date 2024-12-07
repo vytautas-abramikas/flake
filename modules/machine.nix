@@ -44,7 +44,7 @@
 
   hardware = {
     cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
-    graphics.enable = true;
+    # graphics.enable = true;
     nvidia = {
       package = config.boot.kernelPackages.nvidiaPackages.legacy_470;
       modesetting.enable = true;

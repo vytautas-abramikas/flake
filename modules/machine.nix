@@ -61,7 +61,7 @@
     };
   };
 
-  services.xserver.videoDrivers = ["modesetting" "nvidia"];
+  services.xserver.videoDrivers = ["modesetting" "intel" "nvidia"];
   services.bumblebee = {
     enable = true;
     nvidia = { 

@@ -24,7 +24,7 @@
   fileSystems."/mnt/sda2" = {
     device = "/dev/disk/by-uuid/e08fedfa-3132-4d0c-9617-7a96cec23d45";
     fsType = "ext4";
-    options = [ "noauto" "rw"];
+    options = ["rw"];
   };
 
   swapDevices = [];

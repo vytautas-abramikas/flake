@@ -69,7 +69,6 @@
     packages = with pkgs; [
       git nodejs github-desktop vscodium
       brave firefox vlc
-      superTuxKart
     ];
   };
 }

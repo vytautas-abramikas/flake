@@ -62,5 +62,5 @@
     };
   };
 
-  services.xserver.videoDrivers = ["modesetting" "intel" "nvidia"];
+  services.xserver.videoDrivers = ["i915" "nvidia"];
 }

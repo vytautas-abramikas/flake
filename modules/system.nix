@@ -15,7 +15,7 @@
 
   i18n = { 
     defaultLocale = "en_GB.UTF-8";
-    supportedLocales = [ "en_GB.UTF-8/UTF-8" "en_DK.UTF-8/UTF-8" ];
+    supportedLocales = ["en_GB.UTF-8/UTF-8" "en_DK.UTF-8/UTF-8"];
   };
   
   services = {
@@ -63,7 +63,7 @@
 
   users.users.broliux = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager"];
+    extraGroups = ["wheel" "networkmanager"];
     home = "/home/broliux";
     shell = pkgs.bash;
     packages = with pkgs; [

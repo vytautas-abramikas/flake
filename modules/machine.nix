@@ -9,21 +9,25 @@
     kernelModules = ["kvm-intel"];
     extraModulePackages = [];
     kernelParams = ["modprobe.blacklist=nouveau"];
-    loader.grub = {
-      enable = true;
-      device = "/dev/sda";
+    loader = {
+      grub = {
+        enable = true;
+        efiSupport = true;
+        device = "nodev";
+      };
+      efi.canTouchEfiVariables = true;
     };
   };
 
-  fileSystems."/" = { 
-    device = "/dev/disk/by-uuid/502fb189-f6fe-461d-b49f-1ac3ebb24ae2";
+  fileSystems."/" = {
+    device = "/dev/disk/by-uuid/79e3587e-956a-406c-8075-8b6c6ab6240c";
     fsType = "ext4";
   };
 
-  fileSystems."/mnt/sda2" = {
-    device = "/dev/disk/by-uuid/e08fedfa-3132-4d0c-9617-7a96cec23d45";
-    fsType = "ext4";
-    options = ["rw"];
+  fileSystems."/boot" = {
+    device = "/dev/disk/by-uuid/0FFC-E9D6";
+    fsType = "vfat";
+    options = [ "fmask=0022" "dmask=0022" ];
   };
 
   swapDevices = [];

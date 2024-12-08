@@ -9,7 +9,7 @@
     kernelModules = ["kvm-intel"];
     extraModulePackages = [];
     kernelParams = ["modprobe.blacklist=nouveau" "i915.modeset=1"];
-    extraModprobeConfig = "options fbcon mode_option=1366x768-32";
+    # extraModprobeConfig = "options fbcon mode_option=1366x768-32";
     loader.grub = {
       enable = true;
       device = "/dev/sda";
@@ -54,10 +54,6 @@
         intelBusId = "PCI:0:2:0";
         nvidiaBusId = "PCI:1:0:0";
         sync.enable = true;
-        offload = {
-          enable = true;
-          enableOffloadCmd = true;
-        };
       };
     };
   };

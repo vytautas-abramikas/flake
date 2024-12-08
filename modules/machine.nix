@@ -8,8 +8,7 @@
     };
     kernelModules = ["kvm-intel"];
     extraModulePackages = [];
-    kernelParams = ["modprobe.blacklist=nouveau" "i915.modeset=1"];
-    # extraModprobeConfig = "options fbcon mode_option=1366x768-32";
+    kernelParams = ["modprobe.blacklist=nouveau"];
     loader.grub = {
       enable = true;
       device = "/dev/sda";
@@ -45,6 +44,7 @@
   hardware = {
     cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
     graphics.enable = true;
+    enableAllFirmware = true;
     nvidia = {
       package = config.boot.kernelPackages.nvidiaPackages.legacy_470;
       modesetting.enable = true;

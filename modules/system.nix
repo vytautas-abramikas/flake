@@ -69,6 +69,7 @@
     packages = with pkgs; [
       git nodejs github-desktop vscodium
       brave firefox vlc
+      ventoy-full
     ];
   };
 }

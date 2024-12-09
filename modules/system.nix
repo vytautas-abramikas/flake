@@ -54,6 +54,7 @@
 
     systemPackages = with pkgs; [
       gptfdisk wget fbset hwinfo htop busybox tree e2fsprogs
+      kdePackages.partitionmanager
     ];
 
     plasma6.excludePackages = with pkgs.kdePackages; [
@@ -69,7 +70,7 @@
     packages = with pkgs; [
       git nodejs github-desktop vscodium kdePackages.kcalc
       brave firefox vlc
-      ventoy-full kdePackages.partitionmanager
+      ventoy-full
     ];
   };
 }

@@ -1,6 +1,8 @@
 { config, lib, pkgs, ... }: 
 
 {
+  home-manager.backupFileExtension = "backup";
+
   home-manager.users.broliux = { config, lib, pkgs, ... }: {
     home = {
       stateVersion = "24.11";
@@ -14,8 +16,6 @@
         ventoy-full
       ];
     };
-
-    home-manager.backupFileExtension = "backup";
 
     xsession.windowManager.i3 = {
       enable = true;

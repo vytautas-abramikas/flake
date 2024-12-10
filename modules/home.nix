@@ -21,6 +21,11 @@
       enable = true;
       config = {
         modifier = "Mod4";
+        fonts = [ "pango:DejaVu Sans Mono 14" ];
+        keybindings = { 
+          "$mod+Return" = "exec kitty";
+          "$mod+b" = "exec brave";
+        };
       };
     };
 

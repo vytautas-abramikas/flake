@@ -65,13 +65,6 @@
   users.users.broliux = {
     isNormalUser = true;
     extraGroups = ["wheel" "networkmanager"];
-    home = "/home/broliux";
-    shell = pkgs.bash;
-    packages = with pkgs; [
-      git nodejs github-desktop vscodium kdePackages.kcalc
-      brave firefox vlc
-      ventoy-full
-    ];
   };
 }
 

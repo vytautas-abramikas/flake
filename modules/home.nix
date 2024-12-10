@@ -3,6 +3,7 @@
 {
   home-manager.users.broliux = { config, pkgs, ... }: {
     home = {
+      stateVersion = "24.11";
       username = "broliux";
       homeDirectory = "/home/broliux";
     

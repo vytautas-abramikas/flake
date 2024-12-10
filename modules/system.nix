@@ -34,10 +34,13 @@
         options = "grp:alt_shift_toggle,eurosign:e,caps:escape,grp_led:scroll";
       };
     };
-    displayManager.sddm = {
+    displayManager.lightdm = {
       enable = true;
     };
     desktopManager.plasma6 = {
+      enable = true;
+    };
+    desktopManager.xfce = {
       enable = true;
     };
   };

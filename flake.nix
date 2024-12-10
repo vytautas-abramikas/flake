@@ -5,7 +5,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
     home-manager = {
       url = "github:nix-community/home-manager";
-      rev = "24.11";
+      ref = "release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

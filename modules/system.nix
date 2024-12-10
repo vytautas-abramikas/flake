@@ -24,8 +24,8 @@
       pulse.enable = true;
     };
     libinput.enable = true;
-    openssh.enable = true;
-    printing.enable = true;
+    # openssh.enable = true;
+    # printing.enable = true;
     xserver = {
       enable = true;
       xkb = {
@@ -42,7 +42,6 @@
     };
     displayManager.sddm = {
       enable = true;
-      settings = { Time = { Format = "24"; }; };
     };
     desktopManager.plasma6 = {
       enable = true;

@@ -55,6 +55,10 @@
     cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
     graphics.enable = true;
     enableAllFirmware = true;
+    bluetooth = {
+      enable = true;
+      powerOnBoot = true;
+    };
     nvidia = {
       package = config.boot.kernelPackages.nvidiaPackages.legacy_470;
       modesetting.enable = true;

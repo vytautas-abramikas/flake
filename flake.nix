@@ -19,7 +19,7 @@
         modules = [
           ./modules/machine.nix
           ./modules/system.nix
-          (home-manager.nixosModules.home-manager)
+          home-manager.nixosModules.home-manager
           ./modules/home.nix
         ];
       };

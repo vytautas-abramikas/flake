@@ -33,6 +33,12 @@
         layout = "us,lt,ru";
         options = "grp:alt_shift_toggle,eurosign:e,caps:escape,grp_led:scroll";
       };
+      windowManager.i3 = {
+        enable = true;
+        extraPackages = with pkgs; [
+          dmenu i3status i3lock i3blocks
+        ];
+      };
     };
     displayManager.sddm = {
       enable = true;

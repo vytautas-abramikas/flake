@@ -38,10 +38,10 @@
       };
       desktopManager.xfce = {
         enable = true;
+        extraPackages = with pkgs; [ 
+          xfce4-xkb-plugin
+        ];
       };
-    };
-    desktopManager.plasma6 = {
-      enable = true;
     };
   };
 
@@ -58,17 +58,13 @@
       gptfdisk wget fbset hwinfo htop busybox tree e2fsprogs
       kdePackages.partitionmanager
     ];
-
-    plasma6.excludePackages = with pkgs.kdePackages; [
-      elisa
-    ];
   };
 
   users.users.broliux = {
     isNormalUser = true;
     extraGroups = ["wheel" "networkmanager"];
     packages = with pkgs; [
-      git nodejs github-desktop vscodium kdePackages.kcalc
+      git nodejs github-desktop vscodium
       brave firefox vlc
       ventoy-full
     ];

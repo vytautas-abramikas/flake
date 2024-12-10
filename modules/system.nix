@@ -33,14 +33,8 @@
         layout = "us,lt,ru";
         options = "grp:alt_shift_toggle,eurosign:e,caps:escape,grp_led:scroll";
       };
-      displayManager.lightdm = {
-        enable = true;
-      };
       desktopManager.xfce = {
         enable = true;
-        extraPackages = with pkgs; [ 
-          xfce.xfce4-xkb-plugin
-        ];
       };
     };
   };
@@ -57,6 +51,7 @@
     systemPackages = with pkgs; [
       gptfdisk wget fbset hwinfo htop busybox tree e2fsprogs
       kdePackages.partitionmanager
+      xfce.xfce4-xkb-plugin
     ];
   };
 

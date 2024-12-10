@@ -51,7 +51,7 @@
     systemPackages = with pkgs; [
       gptfdisk wget fbset hwinfo htop busybox tree e2fsprogs
       kdePackages.partitionmanager
-      xfce.xfce4-xkb-plugin
+      xfce.xfce4-xkb-plugin adapta-gtk-theme
     ];
   };
 

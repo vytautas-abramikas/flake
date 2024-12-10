@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }: 
 
 {
-  home-manager.users.broliux = { config, pkgs, ... }: {
+  home-manager.users.broliux = { config, lib, pkgs, ... }: {
     home = {
       stateVersion = "24.11";
       username = "broliux";

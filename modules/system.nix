@@ -39,7 +39,7 @@
       desktopManager.xfce = {
         enable = true;
         extraPackages = with pkgs; [ 
-          xfce4-xkb-plugin
+          xfce.xfce4-xkb-plugin
         ];
       };
     };

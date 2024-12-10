@@ -13,19 +13,13 @@
         brave firefox vlc
         ventoy-full
       ];
+
+      xsession.windowManager.i3 = {
+        enable = true;
+        config = {
+          modifier = "Mod4";
+        };
+      };
     };
-
-    # xsession.windowManager.i3 = {
-    #   enable = true;
-    #   package = pkgs.i3-gaps;
-    #   config = {
-    #     modifier = "Mod4";
-    #     gaps = {
-    #       inner = 10;
-    #       outer = 5;
-    #     };
-    #   };
-    # };
-
   };
 }

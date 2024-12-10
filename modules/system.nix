@@ -33,14 +33,14 @@
         layout = "us,lt,ru";
         options = "grp:alt_shift_toggle,eurosign:e,caps:escape,grp_led:scroll";
       };
+      desktopManager.xfce = {
+        enable = true;
+      };
     };
     displayManager.lightdm = {
       enable = true;
     };
     desktopManager.plasma6 = {
-      enable = true;
-    };
-    desktopManager.xfce = {
       enable = true;
     };
   };

@@ -8,6 +8,7 @@
       homeDirectory = "/home/broliux";
 
       packages = with pkgs; [
+        kitty
         git nodejs github-desktop vscodium kdePackages.kcalc
         brave firefox vlc
         ventoy-full

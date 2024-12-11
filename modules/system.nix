@@ -18,26 +18,9 @@
     supportedLocales = ["en_GB.UTF-8/UTF-8" "en_DK.UTF-8/UTF-8"];
   };
   
-  # security.pam.services.login = {
-  #   kwallet = {
-  #     enable = true;
-  #     package = pkgs.kdePackages.kwallet-pam;
-  #   };
-  # };
-
-  #   security.pam.services.lightdm = {
-  #   kwallet = {
-  #     enable = true;
-  #     package = pkgs.kdePackages.kwallet-pam;
-  #   };
-  # };
-
-  #   security.pam.services.xfce = {
-  #   kwallet = {
-  #     enable = true;
-  #     package = pkgs.kdePackages.kwallet-pam;
-  #   };
-  # };
+  security.pam.services.lightdm.enableGnomeKeyring = true;
+  services.gnome.gnome-keyring.enable = true;
+  programs.seahorse.enable = true;
 
   services = {
     pipewire = {

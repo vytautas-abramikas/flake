@@ -20,6 +20,16 @@
   
   security.pam.services.lightdm = {
     kwallet.enable = true;
+    text = "
+        auth      substack      login
+        auth      optional      pam_kwallet5.so
+        auth      optional      pam_kwallet5.so auto_start
+        account   include       login
+        password  substack      login
+        session   include       login
+        session   optional      pam_kwallet5.so
+        session   optional      pam_kwallet5.so auto_start
+      ";
   };
 
   services = {

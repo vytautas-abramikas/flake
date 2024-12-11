@@ -37,7 +37,7 @@
       };
       displayManager.lightdm = {
         enable = true;
-        background = "/etc/lightdm/Pictures/network-3d-background.png";
+        background = "/home/broliux/Desktop/nix.png";
         greeters.gtk = { 
           enable = true;
           theme.name = "Dracula";

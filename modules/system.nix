@@ -18,7 +18,6 @@
     supportedLocales = ["en_GB.UTF-8/UTF-8" "en_DK.UTF-8/UTF-8"];
   };
   
-  # testing this
   security.pam.services.lightdm = {
     kwallet.enable = true;
   };

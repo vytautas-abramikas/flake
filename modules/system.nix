@@ -20,7 +20,7 @@
   
   # testing this
   security.pam.services.lightdm = {
-    enableGnomeKeyring = true;
+    enableKWallet = true;
   };
 
   services = {
@@ -64,7 +64,7 @@
 
     systemPackages = with pkgs; [
       gptfdisk wget fbset hwinfo htop busybox tree e2fsprogs
-      kdePackages.partitionmanager
+      kdePackages.partitionmanager kdePackages.kwalletmanager
       xfce.xfce4-xkb-plugin dracula-theme papirus-icon-theme
     ];
   };

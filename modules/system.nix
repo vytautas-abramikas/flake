@@ -18,8 +18,11 @@
     supportedLocales = ["en_GB.UTF-8/UTF-8" "en_DK.UTF-8/UTF-8"];
   };
   
-  security.pam.services.lightdm = {
-    kwallet.enable = true;
+  security.pam.services.login = {
+    kwallet = {
+      enable = true;
+      package = pkgs.kdePackages.kwallet-pam;
+    };
     # text = "
     #     auth      optional      pam_kwallet6.so
     #     auth      optional      pam_kwallet6.so auto_start

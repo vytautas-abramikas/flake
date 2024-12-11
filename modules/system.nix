@@ -37,11 +37,11 @@
       };
       displayManager.lightdm = {
         enable = true;
+        background = "/home/broliux/Pictures/dark-background-abstract-background-network-3d-background-3840x2160-8324.png";
         greeters.gtk = { 
           enable = true;
           theme.name = "Dracula";
           iconTheme.name = "Dracula";
-          extraConfig = "background = /home/broliux/Pictures/dark-background-abstract-background-network-3d-background-3840x2160-8324.png";
         };
       };
       desktopManager.xfce = {

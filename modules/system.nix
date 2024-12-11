@@ -20,16 +20,12 @@
   
   security.pam.services.lightdm = {
     kwallet.enable = true;
-    text = "
-        auth      substack      login
-        auth      optional      pam_kwallet6.so
-        auth      optional      pam_kwallet6.so auto_start
-        account   include       login
-        password  substack      login
-        session   include       login
-        session   optional      pam_kwallet6.so
-        session   optional      pam_kwallet6.so auto_start
-      ";
+    # text = "
+    #     auth      optional      pam_kwallet6.so
+    #     auth      optional      pam_kwallet6.so auto_start
+    #     session   optional      pam_kwallet6.so
+    #     session   optional      pam_kwallet6.so auto_start
+    #   ";
   };
 
   services = {
@@ -73,7 +69,7 @@
 
     systemPackages = with pkgs; [
       gptfdisk wget fbset hwinfo htop busybox tree e2fsprogs
-      kdePackages.partitionmanager kdePackages.kwalletmanager
+      kdePackages.partitionmanager kdePackages.kwallet-pam kdePackages.kwalletmanager
       xfce.xfce4-xkb-plugin dracula-theme papirus-icon-theme
     ];
   };

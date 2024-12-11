@@ -23,7 +23,7 @@
       enable = true;
       pulse.enable = true;
     };
-    libinput.enable = true;
+    # libinput.enable = true;
     # openssh.enable = true;
     # printing.enable = true;
     xserver = {

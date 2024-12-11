@@ -18,7 +18,18 @@
     supportedLocales = ["en_GB.UTF-8/UTF-8" "en_DK.UTF-8/UTF-8"];
   };
   
-  security.pam.services.lightdm.enableGnomeKeyring = true;
+  security.pam.services.lightdm = {
+    enableGnomeKeyring = true;
+    text = "
+      auth      substack      login
+      auth      optional      pam_gnome_keyring.so
+      account   include       login
+      password  substack      login
+      password  optional      pam_gnome_keyring.so
+      session   include       login
+      session   optional      pam_gnome_keyring.so auto_start   
+    ";
+  };
 
   services = {
     pipewire = {

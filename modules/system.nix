@@ -39,7 +39,7 @@
       };
       displayManager.lightdm = {
         enable = true;
-        background = lib.mkOverride 500 "/home/broliux/Pictures/network-3d-background.png";
+        background = lib.mkOverride 500 "/usr/share/backgrounds/network-3d-background.png";
         greeters.gtk = { 
           enable = true;
           theme.name = "Dracula";

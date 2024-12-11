@@ -20,15 +20,6 @@
   
   security.pam.services.lightdm = {
     enableGnomeKeyring = true;
-    text = "
-      auth      substack      login
-      auth      optional      pam_gnome_keyring.so
-      account   include       login
-      password  substack      login
-      password  optional      pam_gnome_keyring.so
-      session   include       login
-      session   optional      pam_gnome_keyring.so auto_start   
-    ";
   };
 
   services = {
@@ -59,7 +50,6 @@
         enable = true;
       };
     };
-    gnome.gnome-keyring.enable = true;
   };
 
   environment = {

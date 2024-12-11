@@ -37,7 +37,7 @@
       };
       displayManager.lightdm = {
         enable = true;
-        background = "/home/broliux/Pictures/dark-background-abstract-background-network-3d-background-3840x2160-8324.png";
+        background = "/home/broliux/Pictures/network-3d-background.png";
         greeters.gtk = { 
           enable = true;
           theme.name = "Dracula";

@@ -39,6 +39,9 @@
         enable = true;
         greeters.gtk = { 
           enable = true;
+          theme.name = "Dracula";
+          iconTheme.name = "Dracula";
+          extraconfig = "background = /home/broliux/Pictures/dark-background-abstract-background-network-3d-background-3840x2160-8324.png";
         };
       };
       desktopManager.xfce = {

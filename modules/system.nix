@@ -20,7 +20,7 @@
   
   # testing this
   security.pam.services.lightdm = {
-    enableKWallet = true;
+    kwallet.enable = true;
   };
 
   services = {

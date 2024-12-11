@@ -72,7 +72,7 @@
 
     systemPackages = with pkgs; [
       gptfdisk wget fbset hwinfo htop busybox tree e2fsprogs
-      kdePackages.partitionmanager kdePackages.kwallet-pam kdePackages.kwalletmanager
+      kdePackages.partitionmanager
       xfce.xfce4-xkb-plugin dracula-theme papirus-icon-theme
     ];
   };

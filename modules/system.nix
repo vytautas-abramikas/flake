@@ -35,6 +35,10 @@
         layout = "us,lt";
         options = "grp:alt_shift_toggle,eurosign:e,caps:escape,grp_led:scroll";
       };
+      displayManager.lightdm.greeters.gtk = { 
+        enable = true;
+        package = pkgs.lightdm-gtk-greeter;
+      };
       desktopManager.xfce = {
         enable = true;
       };

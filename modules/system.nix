@@ -23,12 +23,20 @@
       enable = true;
       package = pkgs.kdePackages.kwallet-pam;
     };
-    # text = "
-    #     auth      optional      pam_kwallet6.so
-    #     auth      optional      pam_kwallet6.so auto_start
-    #     session   optional      pam_kwallet6.so
-    #     session   optional      pam_kwallet6.so auto_start
-    #   ";
+  };
+
+    security.pam.services.lightdm = {
+    kwallet = {
+      enable = true;
+      package = pkgs.kdePackages.kwallet-pam;
+    };
+  };
+
+    security.pam.services.xfce = {
+    kwallet = {
+      enable = true;
+      package = pkgs.kdePackages.kwallet-pam;
+    };
   };
 
   services = {

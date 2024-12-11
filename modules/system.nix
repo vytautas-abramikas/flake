@@ -30,7 +30,7 @@
       enable = true;
       xkb = {
         model = "pc105";
-        layout = "us,lt,ru";
+        layout = "us,lt";
         options = "grp:alt_shift_toggle,eurosign:e,caps:escape,grp_led:scroll";
       };
       desktopManager.xfce = {

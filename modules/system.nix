@@ -37,7 +37,7 @@
       };
       displayManager.lightdm = {
         enable = true;
-        background = "/home/broliux/Desktop/nix.png";
+        # background = "/home/broliux/Desktop/nix.png";
         greeters.gtk = { 
           enable = true;
           theme.name = "Dracula";

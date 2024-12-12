@@ -39,12 +39,10 @@
       };
       displayManager.lightdm = {
         enable = true;
-        background = lib.mkOverride 500 "/usr/share/backgrounds/network-3d-background.png";
+        background = "/usr/share/backgrounds/network-3d-background.png";
         greeters.gtk = { 
           enable = true;
           theme.name = "Dracula";
-          iconTheme.name = "Dracula";
-          cursorTheme.size = 20;
           extraConfig = "xft-dpi = 96";
         };
       };

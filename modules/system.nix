@@ -45,7 +45,7 @@
           theme.name = "Dracula";
           iconTheme.name = "Dracula";
           extraConfig = ''
-            font-name = "DejaVu Sans Mono 24"
+            xft-dpi="100"
           '';
         };
       };

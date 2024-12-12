@@ -47,6 +47,7 @@
           extraConfig = ''
             xft-dpi = 100
             show-hostname = false
+            font-name = DejaVu Sans Mono 24
           '';
         };
       };

@@ -45,9 +45,7 @@
           theme.name = "Dracula";
           iconTheme.name = "Dracula";
           cursorTheme.size = 24;
-          extraConfig = ''
-            font-name = Monospace Regular 16
-          '';
+          extraConfig ="xft-dpi = 96";
         };
       };
       desktopManager.xfce = {

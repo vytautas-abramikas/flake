@@ -3,12 +3,12 @@
 {
   boot = {
     initrd = {
-      availableKernelModules = ["xhci_pci" "ehci_pci" "ahci" "usb_storage" "sd_mod" "rtsx_pci_sdmmc"];
+      availableKernelModules = [ "xhci_pci" "ehci_pci" "ahci" "usb_storage" "sd_mod" "rtsx_pci_sdmmc" ];
       kernelModules = [];
     };
-    kernelModules = ["kvm-intel"];
+    kernelModules = [ "kvm-intel" ];
     extraModulePackages = [];
-    kernelParams = ["modprobe.blacklist=nouveau"];
+    kernelParams = [ "modprobe.blacklist=nouveau" ];
     loader = {
       grub = {
         enable = true;
@@ -27,13 +27,13 @@
   fileSystems."/mnt/sda3" = {
     device = "/dev/disk/by-uuid/84fc3d90-b5ee-40eb-b8da-0b3e02d3dd2e";
     fsType = "ext4";
-    options = ["rw"];
+    options = [ "rw" ];
   };
 
   fileSystems."/boot" = {
     device = "/dev/disk/by-uuid/0FFC-E9D6";
     fsType = "vfat";
-    options = ["fmask=0022" "dmask=0022"];
+    options = [ "fmask=0022" "dmask=0022" ];
   };
 
   swapDevices = [];
@@ -72,5 +72,5 @@
     };
   };
 
-  services.xserver.videoDrivers = ["i915" "nvidia"];
+  services.xserver.videoDrivers = [ "i915" "nvidia" ];
 }

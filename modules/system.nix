@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 {
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   system.stateVersion = "24.11";
 
@@ -15,7 +15,7 @@
 
   i18n = { 
     defaultLocale = "en_GB.UTF-8";
-    supportedLocales = ["en_GB.UTF-8/UTF-8" "en_DK.UTF-8/UTF-8"];
+    supportedLocales = [ "en_GB.UTF-8/UTF-8" "en_DK.UTF-8/UTF-8" ];
   };
   
   # credential manager block
@@ -69,13 +69,11 @@
     ];
   };
 
-  fonts.fonts = with pkgs; [
-    nerdfonts
-  ];
+  # fonts.packages = with pkgs; [];
 
   users.users.broliux = {
     isNormalUser = true;
-    extraGroups = ["wheel" "networkmanager"];
+    extraGroups = [ "wheel" "networkmanager" ];
     packages = with pkgs; [
       git nodejs github-desktop vscodium
       brave firefox vlc

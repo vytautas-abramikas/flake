@@ -68,6 +68,10 @@
     ];
   };
 
+  fonts.fonts = with pkgs; [
+    nerdfonts
+  ];
+
   users.users.broliux = {
     isNormalUser = true;
     extraGroups = ["wheel" "networkmanager"];

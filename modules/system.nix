@@ -44,8 +44,8 @@
           enable = true;
           theme.name = "Dracula";
           iconTheme.name = "Dracula";
+          cursorTheme.size = 24;
           extraConfig = ''
-            xft-dpi = 100
             show-hostname = false
             font-name = DejaVu Sans Mono 24
           '';

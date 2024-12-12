@@ -44,9 +44,9 @@
           enable = true;
           theme.name = "Dracula";
           iconTheme.name = "Dracula";
-          cursorTheme.size = 20;
+          cursorTheme.size = 24;
           extraConfig = ''
-            font-name = Monospace Regular 20
+            font-name = Monospace Regular 16
           '';
         };
       };

@@ -46,6 +46,7 @@
           iconTheme.name = "Dracula";
           extraConfig = ''
             xft-dpi = 100
+            show-hostname = false
           '';
         };
       };

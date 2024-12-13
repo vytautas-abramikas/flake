@@ -73,6 +73,13 @@
     ];
   };
 
+  programs.thunar = {
+    enable = true;
+    plugins = with pkgs.xfce; [ 
+      thunar-archive-plugin thunar-volman
+    ];
+  };
+
   # fonts.packages = with pkgs; [];
 
   users.users.broliux = {

@@ -8,7 +8,7 @@
     };
     kernelModules = [ "kvm-intel" ];
     extraModulePackages = [];
-    kernelParams = [ "modprobe.blacklist=nouveau" "resume=/hibernate" ];
+    kernelParams = [ "modprobe.blacklist=nouveau" ];
     loader = {
       grub = {
         enable = true;
@@ -36,13 +36,7 @@
     options = [ "fmask=0022" "dmask=0022" ];
   };
 
-  swapDevices = [
-    {
-      device = "/hibernate";
-      size = 8192;
-      priority = -1;
-    }
-  ];
+  swapDevices = [];
 
   zramSwap = {
     enable = true;

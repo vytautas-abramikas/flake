@@ -27,7 +27,7 @@
   fileSystems."/mnt/sda3" = {
     device = "/dev/disk/by-uuid/84fc3d90-b5ee-40eb-b8da-0b3e02d3dd2e";
     fsType = "ext4";
-    options = [ "rw" ];
+    options = [ "rw" "x-gvfs-show" ];
   };
 
   fileSystems."/boot" = {

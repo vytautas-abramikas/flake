@@ -89,6 +89,7 @@
       git nodejs github-desktop vscodium
       brave firefox vlc
       ventoy-full
+      qalculate-gtk
     ];
   };
 }

@@ -67,6 +67,10 @@
       kdePackages.partitionmanager
       xfce.xfce4-xkb-plugin dracula-theme papirus-icon-theme
     ];
+
+    xfce.excludePackages = with pkgs; [
+      xfce.parole
+    ];
   };
 
   # fonts.packages = with pkgs; [];

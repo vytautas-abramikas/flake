@@ -87,9 +87,10 @@
     extraGroups = [ "wheel" "networkmanager" ];
     packages = with pkgs; [
       git nodejs github-desktop vscodium
-      brave firefox vlc
+      brave firefox transmission_4-gtk
       ventoy-full
-      qalculate-gtk
+      libreoffice-fresh qalculate-gtk
+      vlc
     ];
   };
 }
